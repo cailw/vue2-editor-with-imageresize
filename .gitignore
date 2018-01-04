@@ -13,3 +13,4 @@ dist
 dist-example
 
 example/cloudinary.vue
+.vscode
