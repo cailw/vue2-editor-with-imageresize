@@ -1,5 +1,5 @@
 var path = require('path');
-
+var webpack=require('webpack')
 module.exports = {
   entry: 'example/index.js',
   dist: 'dist-example',
@@ -7,7 +7,12 @@ module.exports = {
     output: {
       path: path.resolve(__dirname, 'dist-example/'),
       publicPath: ""
-    }
+    },
+    plugins:[
+      new webpack.ProvidePlugin({
+        'window.Quill': 'quill'
+      })
+    ]
   },
   filename: {
     js: '[name].js',

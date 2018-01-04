@@ -1,3 +1,4 @@
+const webpack= require('webpack')
 module.exports = {
   entry: 'src/index.js',
   // then user can access `window.Vue2Editor` in browser as well
