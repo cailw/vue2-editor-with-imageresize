@@ -121,7 +121,7 @@ export default {
       let file = $event.target.files[0]
       let Editor = this.quill
       let range = Editor.getSelection();
-      let cursorLocation = range.index
+      let cursorLocation = range.index+1
       this.$emit('imageAdded', file, Editor, cursorLocation)
     }
   }
@@ -130,7 +130,7 @@ export default {
 
 <style>
 .ql-editor {
-  min-height: 200px;
+  height: 720px;
   font-size: 16px;
 }
 
